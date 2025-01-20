@@ -1,4 +1,90 @@
-html {
-  height: 100%;
-  width: 100%;
+/* style.css */
+
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
 }
+
+/* Header Styles */
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+/* Button Container and Button Styles */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  color: #007acc;
+  font-size: 1.5em;
+}
+
+ul, ol {
+  margin: 10px 0 10px 20px;
+}
+
+blockquote {
+  margin: 10px 0;
+  padding: 10px 20px;
+  background: #f1f1f1;
+  border-left: 4px solid #007acc;
+  font-style: italic;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier,
