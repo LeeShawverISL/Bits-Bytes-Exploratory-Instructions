@@ -70,7 +70,79 @@ section h2 {
   font-size: 1.5em;
 }
 
-ul, ol {
+/* Style for the image container */
+.image-container {
+  display: flex;
+  justify-content: space-around;
+  /* Distribute images evenly with space between them */
+  align-items: center;
+  /* Align images vertically (optional) */
+  flex-wrap: wrap;
+  /* Allow images to wrap to the next line on smaller screens */
+  margin-top: 20px;
+}
+
+/* Style for the images */
+.image-container img {
+  max-width: 30%;
+  /* Images take up to 30% of the container width */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 5px;
+  /* Optional: Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* Optional: Add shadow */
+  transition: transform 0.3s ease;
+  /* Add hover effect (optional) */
+}
+
+/* Optional hover effect for images */
+.image-container img:hover {
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+}
+
+/* Lightbox Overlay */
+.lightbox {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Make sure it appears above other content */
+}
+
+.lightbox img {
+  max-width: 90%;
+  /* Adjust image size */
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Fade-in effect for lightbox */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+ul,
+ol {
   margin: 10px 0 10px 20px;
 }
 

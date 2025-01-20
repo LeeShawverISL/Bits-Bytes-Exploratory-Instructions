@@ -7,7 +7,7 @@
   <title>Collaborating with Generative AI: Exploratory Lessons</title>
   <link rel="stylesheet" href="style.css">
 </head>
-  
+
 <main>
   <header>
     <h1>Create your own webpage</h1>
@@ -34,7 +34,8 @@
     <p>Write a clear and specific prompt for the AI. <mark>THIS IS THE SKILL SET WE ARE FOCUSING ON IN THIS
         UNIT</mark>. Good
       questions get good answers. Prompting AI with garbage questions gets garbage results -- GIGO: Garbage in,
-      garbage, out. Example prompt:</p>
+      garbage, out.</p>
+    <p>Example prompt:</p>
     <blockquote>
       "Write the HTML and CSS code for a webpage about my favorite hobby, photography. Include a title, a header, a
       paragraph about why I love it, and a background image of a camera."
@@ -52,12 +53,25 @@
         link shows you how.</a> Test the webpage and make
       adjustments as needed.</p>
     <p>
-      <strong>Extension Ideas:</strong>
-      <ul>
-        <li>Change font color, size, background.</li>
-        <li>Create a box around text.</li>
-        <li>Create a clickable button to a different location on the web.</li>
-      </ul>
+
+    <div class="image-container">
+      <img src="1.jpg" alt="Step 1 example" onclick="openLightbox(this)">
+      <img src="2.jpg" alt="Step 2 example" onclick="openLightbox(this)">
+      <img src="3.jpg" alt="Step 3 example" onclick="openLightbox(this)">
+    </div>
+
+    <!-- Lightbox Overlay -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Expanded View">
+    </div>
+
+
+    <strong>Extension Ideas:</strong>
+    <ul>
+      <li>Change font color, size, background.</li>
+      <li>Create a box around text.</li>
+      <li>Create a clickable button to a different location on the web.</li>
+    </ul>
     </p>
   </section>
 
@@ -71,5 +85,24 @@
       <li>What would you like to explore next with AI and coding?</li>
     </ul>
   </section>
+
+  <script>
+    function openLightbox(image) {
+      // Display the lightbox
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+      lightbox.style.display = "flex";
+      lightboxImg.src = image.src; // Set the lightbox image to the clicked image
+    }
+
+    function closeLightbox() {
+      // Hide the lightbox
+      const lightbox = document.getElementById("lightbox");
+      lightbox.style.display = "none";
+    }
+  </script>
+
+
 </main>
-  </html>
+
+</html>
