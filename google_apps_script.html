@@ -28,14 +28,15 @@
       <h2>Step 1: Getting Started with Apps Script</h2>
       <p><strong>Task:</strong> Follow these steps to create a custom script in Google Apps Script:</p>
       <ol>
-        <li>Open a new Google Doc by typing <strong><a href="https://docs.new" target="_blank">docs.new</a></strong> into your browser’s address bar.</li>
-        <li>In the Google Doc, go to the top menu and click <strong>Extensions > Apps Script</strong>. This will open the Apps Script editor.</li>
+        <li>Open a new Google Doc by typing <strong>docs.new</strong> into your browser’s address bar.</li>
+        <li>In the Google Doc, go to the top menu and click <strong>Extensions > Apps Script</strong>. This will open
+          the Apps Script editor.</li>
         <li>In the editor, delete any placeholder code and paste the following script:</li>
       </ol>
       <pre><code>
 function onOpen() {
   const ui = DocumentApp.getUi();
-  const menu = ui.createMenu('Custom Tools');
+  const menu = ui.createMenu('My New Menu');
   menu.addItem('Show Alert', 'showCustomAlert');
   menu.addToUi();
 }
@@ -47,10 +48,13 @@ function showCustomAlert() {
       </code></pre>
       <p>Explanation of the code:</p>
       <ul>
-        <li><strong>onOpen:</strong> Automatically adds a custom menu called <strong>"Custom Tools"</strong> when the document is opened.</li>
-        <li><strong>showCustomAlert:</strong> Displays an alert with a motivational message when the menu item is clicked.</li>
+        <li><strong>onOpen:</strong> Automatically adds a custom menu called <strong>"Custom Tools"</strong> when the
+          document is opened.</li>
+        <li><strong>showCustomAlert:</strong> Displays an alert with a motivational message when the menu item is
+          clicked.</li>
       </ul>
-      <p><strong>Task:</strong> Save the script, reload the Google Doc, and test the custom menu by clicking <strong>Custom Tools > Show Alert</strong>.</p>
+      <p><strong>Task:</strong> Save the script, reload the Google Doc, and test the custom menu by clicking
+        <strong>Custom Tools > Show Alert</strong>.</p>
     </section>
 
     <section>
@@ -79,9 +83,9 @@ function showCustomAlert() {
         <li>A content library that builds a searchable index of Google Drive documents by tags or keywords.</li>
       </ul>
       <p><mark>THIS IS THE SKILL SET WE ARE FOCUSING ON IN THIS
-        UNIT</mark>. Good
-      questions get good answers. Prompting AI with garbage questions gets garbage results -- GIGO: Garbage in,
-      garbage, out.</p>
+          UNIT</mark>. Good
+        questions get good answers. Prompting AI with garbage questions gets garbage results -- GIGO: Garbage in,
+        garbage, out.</p>
       <p>Example AI prompt:</p>
       <blockquote>
         Write a Google Apps Script that adds a custom menu in Google Sheets. The menu should include:
