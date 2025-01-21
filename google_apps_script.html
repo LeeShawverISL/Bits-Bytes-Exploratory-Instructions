@@ -25,25 +25,32 @@
     </section>
 
     <section>
-      <h2>Step 1: Understanding Google Apps Script</h2>
-      <p><strong>Task:</strong> Follow these steps to get started with Apps Script:</p>
+      <h2>Step 1: Getting Started with Apps Script</h2>
+      <p><strong>Task:</strong> Follow these steps to create a custom script in Google Apps Script:</p>
       <ol>
-        <li>Open <a href="https://script.google.com" target="_blank">Google Apps Script</a> or go to a Google
-          Sheets/Docs file and click:
-          <br><strong>Extensions > Apps Script</strong>.
-        </li>
-        <li>Familiarize yourself with the editor:
-          <ul>
-            <li><strong>Code Editor:</strong> Where you write your scripts.</li>
-            <li><strong>Execution Logs:</strong> View logs and errors.</li>
-          </ul>
-        </li>
-        <li>Test a sample script:</li>
+        <li>Open a new Google Doc by typing <strong><a href="https://docs.new" target="_blank">docs.new</a></strong> into your browser’s address bar.</li>
+        <li>In the Google Doc, go to the top menu and click <strong>Extensions > Apps Script</strong>. This will open the Apps Script editor.</li>
+        <li>In the editor, delete any placeholder code and paste the following script:</li>
       </ol>
-      <pre><code>function helloWorld() {
-  Logger.log("Hello, Google Apps Script!");
-}</code></pre>
-      <p>Run the script and check the logs for the message: <strong>"Hello, Google Apps Script!"</strong></p>
+      <pre><code>
+function onOpen() {
+  const ui = DocumentApp.getUi();
+  const menu = ui.createMenu('Custom Tools');
+  menu.addItem('Show Alert', 'showCustomAlert');
+  menu.addToUi();
+}
+
+function showCustomAlert() {
+  const ui = DocumentApp.getUi();
+  ui.alert('This coding language can take your Docs and Sheets to the next level. How can you customize your life with Google Apps Script?');
+}
+      </code></pre>
+      <p>Explanation of the code:</p>
+      <ul>
+        <li><strong>onOpen:</strong> Automatically adds a custom menu called <strong>"Custom Tools"</strong> when the document is opened.</li>
+        <li><strong>showCustomAlert:</strong> Displays an alert with a motivational message when the menu item is clicked.</li>
+      </ul>
+      <p><strong>Task:</strong> Save the script, reload the Google Doc, and test the custom menu by clicking <strong>Custom Tools > Show Alert</strong>.</p>
     </section>
 
     <section>
@@ -60,7 +67,16 @@
         <li>A custom menu in Google Sheets for quick tasks.</li>
         <li>A macro in Google Docs that formats text automatically.</li>
         <li>A script to generate a summary report from Google Sheets data.</li>
-        <li>A script to schedule calendar events based on spreadsheet data.</li>
+        <li>A script to automate data cleaning in Google Sheets (e.g., remove duplicates, format dates).</li>
+        <li>A script to track changes in Google Docs or Sheets and log them into a separate sheet.</li>
+        <li>A custom notification system that sends reminders or alerts via email or Google Chat.</li>
+        <li>A to-do list app integrated with Google Sheets to manage tasks.</li>
+        <li>A script to fetch weather information into Google Sheets using an API like OpenWeatherMap.</li>
+        <li>A translation tool that converts text in Google Sheets into multiple languages using Google Translate.</li>
+        <li>An email campaign manager that sends personalized messages to a list of recipients.</li>
+        <li>A survey response visualizer that creates charts or graphs in Google Sheets automatically.</li>
+        <li>A meeting scheduler that suggests open slots in participants' Google Calendar schedules.</li>
+        <li>A content library that builds a searchable index of Google Drive documents by tags or keywords.</li>
       </ul>
       <p><mark>THIS IS THE SKILL SET WE ARE FOCUSING ON IN THIS
         UNIT</mark>. Good
